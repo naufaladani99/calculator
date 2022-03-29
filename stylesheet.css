@@ -39,6 +39,19 @@ button{
     outline: none;
 }
 
+.operator,.equal-sign{
+    background-color: orange;
+}
+
 .zero-btn, .bersihkan{
     width: 50%;
+}
+
+/* hover */
+button:hover{
+    background-color: darkgray;
+}
+
+.operator:hover{
+    background-color: darkorange;
 }
