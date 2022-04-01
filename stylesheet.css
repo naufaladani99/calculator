@@ -67,13 +67,14 @@ button:hover {
 
 @media (max-width:670px) {
     .kalkulator {
-        width: 100%;
+        width: 1000x;
+        height: 100%;
     }
 }
 
-@media (max-width:670px) {
+@media (max-width:100px) {
     .kalkulator {
-        width: 50%;
+        width: 100%;
     }
 }
 
