@@ -2,38 +2,38 @@ const numbers = document.querySelectorAll(".number")
 console.log(numbers)
 
 numbers.forEach((number) => {
-console.log(number)
+    console.log(number)
 })
 
 numbers.forEach((number) => {
-number.addEventListener("click",(event)=> {
-    console.log(event.target.value)
-})
+    number.addEventListener("click", (event) => {
+        console.log(event.target.value)
+    })
 })
 
 const kalkulatorLayar = document.querySelector('.kalkulator-layar')
 
 const updateScreen = (number) => {
-kalkulatorLayar.value = number
+    kalkulatorLayar.value = number
 }
 
 const number = document.querySelectorAll(".number")
 
 numbers.forEach((number) => {
-number.addEventListener("click",(event) => {
-    updateScreen(event.target.value)
+    number.addEventListener("click", (event) => {
+        updateScreen(event.target.value)
     })
 })
 
-let prevNumber =''
-let calculationOperator =''
-let currentNumber ='0'
+let prevNumber = ''
+let calculationOperator = ''
+let currentNumber = '0'
 
 const inputNumber = (number) => {
-    if (currentNumber === '0')  {
+    if (currentNumber === '0') {
         currentNumber = number
-    }else{
-        currentNumber +=number
+    } else {
+        currentNumber += number
     }
 }
 
@@ -54,7 +54,7 @@ operators.forEach((operator) => {
 })
 
 const inputOperator = (operator) => {
-    if(calculationOperator === ''){
+    if (calculationOperator === '') {
 
         prevNumber = currentNumber
     }
@@ -79,27 +79,27 @@ equalSign.addEventListener('click', (event) => {
 
 const calculate = () => {
     let result = ''
-    switch(calculationOperator) {
-    case '+':
-        result = parseFloat (prevNumber) + parseFloat(currentNumber)
-        break
+    switch (calculationOperator) {
+        case '+':
+            result = parseFloat(prevNumber) + parseFloat(currentNumber)
+            break
 
-    case '-':
-        result = prevNumber - currentNumber
-        break  
-        
-    case '*':
-        result = prevNumber * currentNumber
-        break
+        case '-':
+            result = prevNumber - currentNumber
+            break
 
-    case '/':
-        result = prevNumber / currentNumber
-        break 
+        case '*':
+            result = prevNumber * currentNumber
+            break
+
+        case '/':
+            result = prevNumber / currentNumber
+            break
 
         default:
-return
-              
-    
+            return
+
+
     }
     currentNumber = result
     calculationOperator = ''
@@ -131,13 +131,16 @@ decimal.addEventListener('click', (event) => {
 })
 
 inputDecimal = (dot) => {
-    if(currentNumber.includes('.')){
+    if (currentNumber.includes('.')) {
         return
     }
     currentNumber += dot
 }
 
-
+function myFunction() {
+    var element = document.querySelector('.badan');
+    element.classList.toggle("dark-mode");
+}
 
 
 alert("Hello! Wellcome to my Smart Calculator");
