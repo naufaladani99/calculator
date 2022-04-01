@@ -1,5 +1,5 @@
 .badan{
-    background-color: yellowgreen;
+    background: #bae1ff;
 }
 
 .kalkulator{
@@ -31,7 +31,7 @@
 
 button{
     height: 80px;
-    background-color: gray;
+    background-color: green;
     border: 1px solid black;
     font-size: 32px;
     color: white;
@@ -40,7 +40,7 @@ button{
 }
 
 .operator,.equal-sign{
-    background-color: orange;
+    background-color: blue;
 }
 
 .zero-btn, .bersihkan{
@@ -49,11 +49,11 @@ button{
 
 /* hover */
 button:hover{
-    background-color: darkgray;
+    background-color: darkgreen;
 }
 
 .operator:hover{
-    background-color: darkorange;
+    background-color: darkblue;
 }
 
 
